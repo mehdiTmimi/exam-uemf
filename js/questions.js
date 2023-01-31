@@ -1,4 +1,4 @@
-import { answerInput, questionInput } from "./config.js"
+import { answerInput, questionInput, questions } from "./config.js"
 
 export const vider=()=>{
     questionInput.value=""
@@ -39,9 +39,22 @@ export const addQuestion=(tab,question)=>{
 
     deleteBtn.addEventListener('click',()=>{
         // TODO: delete question from array + from DOM 
+        let position=tab.indexOf(question)
+        tab.splice(position,1);
+        mainDiv.remove();
+        for(let i=position;i<questions.children.length;i++)
+        {
+            let element = questions.children[i];
+            element.children[0].innerText=i+1;
+            //element.children[0].innerText=parseInt(element.children[0].innerText)-1
+        }
     })
     swithBtn.addEventListener('click',()=>{
-        //TODO: permuter la reponse + update DOM
+        question.answer=!question.answer
+        mainDiv.classList.remove("true")
+        mainDiv.classList.remove("false")
+        mainDiv.classList.add(question.answer+"")
+
     })
 
     questions.appendChild(mainDiv)

@@ -20,7 +20,7 @@ submitBtn.addEventListener('click',()=>{
         return alert("veuillez remplir tous les champs")
 
     addQuestion(questions,question);
-    
+    vider();
     
 })
 
