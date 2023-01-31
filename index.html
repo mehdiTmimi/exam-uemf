@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exam uemf 2023 - node js & vanilla js</title>
     <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
@@ -21,14 +22,14 @@
                 New Question:
             </h2>
             <div class="form">
-                <input placeholder="question">
-                <select>
+                <input id="questionInput" placeholder="question">
+                <select id="answerInput">
                     <option value="true">true</option>
                     <option value="false">false</option>
                 </select>
                 <div class="controls">
-                    <button class="reset">reset</button>
-                    <button class="submit">submit</button>
+                    <button id="resetBtn" class="reset">reset</button>
+                    <button id="submitBtn" class="submit">submit</button>
                 </div>
             </div>
         </article>
@@ -36,7 +37,7 @@
             <h2>
                 Questions (14)
             </h2>
-            <div class="questions">
+            <div id="questions" class="questions">
                 <div class="question true">
                     <span class="idQuestion">1</span>
                     <div class="content">

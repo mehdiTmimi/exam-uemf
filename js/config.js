@@ -1,0 +1,5 @@
+export const questionInput=document.getElementById("questionInput")
+export const answerInput=document.getElementById("answerInput")
+export const resetBtn=document.getElementById("resetBtn")
+export const submitBtn=document.getElementById("submitBtn")
+export const questions=document.getElementById("questions")
